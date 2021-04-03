@@ -1,0 +1,5 @@
+*.mkv
+*.mp3
+linkliste.txt.bak
+venv\
+venv/
