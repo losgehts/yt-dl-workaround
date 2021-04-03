@@ -60,7 +60,11 @@ for /F "usebackq tokens=*" %%A in ("videofiles.txt") do (
     if "%%A"=="linkliste.txt" set VIDEO=0
     if "%%A"=="videofiles.txt" set VIDEO=0
     if "%%A"=="readme.txt" set VIDEO=0
-    
+    if "%%A"=="readme.md" set VIDEO=0
+    if "%%A"==".gitignore" set VIDEO=0
+    if "%%A"=="LICENSE" set VIDEO=0
+    if "%%A"=="linkliste.txt.bak" set VIDEO=0
+
     if not defined VIDEO (
         ffmpeg -i "%%A" "%%~nA.mp3"
     )
